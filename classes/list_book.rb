@@ -3,7 +3,7 @@ require './fetch_book'
 require 'json'
 
 module ListBook
-  include FetchBook
+  include FetchData
 
   def list_books
     if fetch_books.empty?
