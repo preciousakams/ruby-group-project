@@ -11,7 +11,7 @@ class Create
     publisher = gets.chomp
     print 'Enter book cover state (good, bad): '
     cover_state = gets.chomp
-    print 'Enter book publish date: '
+    print 'Enter book publish year: '
     publish_date = gets.chomp
     save_book(Book.new(publisher, cover_state, publish_date))
   end
