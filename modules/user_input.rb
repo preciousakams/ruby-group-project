@@ -7,7 +7,6 @@ module UserInput
     [first_name, last_name]
   end
 
-
   def request_game
     puts 'Is this game for multiple players?(yes/no):'
     multiplayer = gets.chomp
@@ -17,5 +16,4 @@ module UserInput
     publish_date = gets.chomp
     [multiplayer, last_played_at, publish_date]
   end
-
 end
