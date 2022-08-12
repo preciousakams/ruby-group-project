@@ -22,7 +22,6 @@ describe Game do
   end
 
   context 'Test can_be_archived? method' do
-
     it "return true if both parent's method and last_played_at is return true" do
       expect(@game1.can_be_archived?).to eql(true)
     end

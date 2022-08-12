@@ -21,7 +21,6 @@ class Create
     author.add_item(item)
   end
 
-
   def create_game
     puts "Let's create a game!:"
     new_label = create_label('Game')
