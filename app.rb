@@ -1,7 +1,9 @@
 require_relative('./classes/list')
+require_relative('./classes/create')
 class App
   def initialize
     @list = List.new
+    @create = Create.new
   end
 
   def options
@@ -13,6 +15,9 @@ class App
 
       elsif option > 4 && option <= 8
         second_correction(option)
+
+      elsif option > 8 && option <= 12
+        third_correction(option)
       else
         break
       end
@@ -43,6 +48,19 @@ class App
       @list.list_all_authors
     when 8
       @list.list_all_sources
+    end
+  end
+
+  def third_correction(option)
+    case option
+    when 9
+      @create.create_book
+    when 10
+      @create.create_music_album
+    when 11
+      @list.list_all_authors
+    when 12
+      @create.create_game
     end
   end
 end
