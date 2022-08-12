@@ -1,5 +1,7 @@
 class Item
-  def initialize(genre, author, source, label, publish_date = Time.year)
+  attr_accessor :id, :label, :publish_date
+
+  def initialize(genre, author, source, label, publish_date = Time.now.year)
     @id = rand(1..100)
     @genre = genre
     @author = author
