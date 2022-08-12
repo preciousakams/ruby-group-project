@@ -22,4 +22,15 @@ class Create
   end
 
 
+  def create_game
+    puts "Let's create a game!:"
+    new_label = create_label('Game')
+    new_author = create_author('Author')
+    new_genre = create_genre('Game')
+    multiplayer, last_played_at, publish_date = request_game
+    new_game = Game.new(multiplayer, Time.new(last_played_at), publish_date: Time.new(publish_date))
+    new_game.move_to_archive
+    save_game(new_author, new_label, new_genre, new_game)
+    puts 'Game created successfully.'
+  end
 end
