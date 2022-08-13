@@ -50,4 +50,19 @@ module SaveDate
     )
     File.write('./all_json_files/music_albums.json', JSON.generate(data))
   end
+
+  def save_book(new_author, new_label, new_genre, new_book)
+    data = retrieve_books
+    save_genre(new_genre)
+    save_label(new_label)
+    save_author(new_author)
+    data.push(
+      {
+        id: new_book.id, publisher: new_book.publisher, publish_date: new_book.publish_date,
+        cover_state: new_book.cover_state, archived: new_book.archived, label: new_label.id,
+        genre: new_genre.id, author: new_author.id
+      }
+    )
+    File.write('./all_json_files/books.json', JSON.generate(data))
+  end
 end

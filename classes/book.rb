@@ -1,14 +1,15 @@
 require './item'
 class Book < Item
-  attr_accessor :publisher, :cover_state
+  attr_accessor :publisher, :cover_state, :archived
 
-  def initialize(publisher, cover_state, publish_date = Time.now.year)
-    super(id, publish_date, nil, nil)
+  def initialize(publisher = 'Unknown', cover_state = 'Unknown',
+                 publish_date: Time.now, archived: nil, id: rand(1..1000))
+    super(publish_date, archived: archived, id: id)
     @publisher = publisher
     @cover_state = cover_state
   end
 
   def can_be_archived?
-    Time.now.year - @publish_date > 10 || @cover_state == 'bad'
+    super || @cover_state == 'bad'
   end
 end

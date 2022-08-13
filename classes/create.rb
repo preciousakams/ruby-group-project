@@ -37,18 +37,6 @@ class Create
     author.add_item(item)
   end
 
-  # def create_book
-  #   puts "Let's create a book!:"
-  #   new_label = create_label('Book')
-  #   new_author = create_author('Author')
-  #   new_genre = create_genre('Book')
-  #   publisher, cover_state, publish_date = request_book('Book')
-  #   new_book = Book.new(publisher, cover_state, publish_date: Time.new(publish_date))
-  #   new_book.move_to_archive
-  #   save_book(new_author, new_label, new_genre, new_book)
-  #   puts 'Book created successfully.'
-  # end
-
   def create_game
     puts "Let's create a game!:"
     new_label = create_label('Game')
@@ -71,5 +59,17 @@ class Create
     new_music_album.move_to_archive
     save_music_album(new_author, new_label, new_genre, new_music_album)
     puts 'Music Album created successfully.'
+  end
+
+  def create_book
+    puts "Let's create a book!:"
+    new_label = create_label('Book')
+    new_author = create_author('Author')
+    new_genre = create_genre('Book')
+    publisher, cover_state, publish_date = request_book('Book')
+    new_book = Book.new(publisher, cover_state, publish_date: Time.new(publish_date))
+    new_book.move_to_archive
+    save_book(new_author, new_label, new_genre, new_book)
+    puts 'Book created successfully.'
   end
 end

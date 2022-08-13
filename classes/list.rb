@@ -64,4 +64,18 @@ class List
       end
     end
   end
+
+  def list_all_books
+    if retrieve_books.empty?
+      puts 'There is no book!'
+    else
+      retrieve_books.each_with_index do |book, index|
+        label = retrieve_labels.find { |item| item['id'] == book['label'] }
+        puts "#{index + 1}."
+        puts " Book Title: #{label['title']}"
+        puts " Book Publisher: #{book['publisher']}"
+        puts " Year of publication: #{Time.new(book['publish_date'].to_i).year}"
+      end
+    end
+  end
 end

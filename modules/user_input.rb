@@ -37,4 +37,14 @@ module UserInput
     publish_date = gets.chomp
     [on_spotify, publish_date]
   end
+
+  def request_book(element)
+    puts "#{element} Publisher:"
+    publisher = gets.chomp
+    puts "#{element} Cover state (Good or bad):"
+    cover_state = gets.chomp
+    puts 'Year of publication:'
+    publish_date = gets.chomp
+    [publisher, cover_state, publish_date]
+  end
 end
