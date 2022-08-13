@@ -2,6 +2,7 @@ require_relative '../classes/label'
 describe Label do
   before do
     @label = Label.new('penguin', 'red')
+    @item = Item.new(2010)
   end
   describe 'create a new label' do
     it 'should create a new instance of Label' do
@@ -20,8 +21,8 @@ describe Label do
       expect(@label.items).to be_an_instance_of Array
     end
     it 'should be able to add an item to the items array' do
-      @label.add_item('book')
-      expect(@label.items).to include 'book'
+      @label.add_item(@item)
+      expect(@label.items).to include(@item)
     end
   end
 end
