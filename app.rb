@@ -34,7 +34,7 @@ class App
     when 2
       @list.list_all_music_albums
     when 3
-      @list.list_all_movies
+      puts 'No movie functionality yet'
     when 4
       @list.list_all_games
     end
@@ -49,7 +49,7 @@ class App
     when 7
       @list.list_all_authors
     when 8
-      @list.list_all_sources
+      puts 'No source functionality yet'
     end
   end
 
@@ -60,7 +60,7 @@ class App
     when 10
       @create.create_music_album
     when 11
-      @list.list_all_authors
+      puts 'No movie functionality yet'
     when 12
       @create.create_game
     end
