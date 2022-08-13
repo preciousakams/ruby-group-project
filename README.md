@@ -2,7 +2,7 @@
 > A command-line-based Catalog of my things, application built with object-oriented programming (OOP). functionalities include adding and dsplaying books, music albums, games etc.
 
  ***
-> [App Demo](https://drive.google.com/file/d/1jEc1Fhx5qG0CGfsM5AGAJcoYys7MPBlG/view?usp=sharing)
+> [App Demo]
 ## Built With
 > Ruby
 ***
@@ -13,10 +13,13 @@
 * Run the app using ruby main.rb  or require main.rb
 * Click on the numbers representing your options and follow the command prompt
 ***
+##  unit testing
+* Run tests by clicking rspec spec
+***
 ### Prerequisites
 > Ruby
 ***
-### Author
+### Authors
 
 👤 Onyeagoziri Precious Akams
 
