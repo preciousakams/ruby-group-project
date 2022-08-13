@@ -2,10 +2,10 @@ require_relative('../classes/music_album')
 
 describe MusicAlbum do
   before :each do
-    @music_album = MusicAlbum.new(true,publish_date: Time.new(2009))
+    @music_album = MusicAlbum.new(true, publish_date: Time.new(2009))
     @music_album1 = MusicAlbum.new(true, publish_date: Time.new(2005))
     @music_album2 = MusicAlbum.new(true, publish_date: Time.new(2020))
-    @music_album3 = MusicAlbum.new(false,publish_date: Time.new(1999))
+    @music_album3 = MusicAlbum.new(false, publish_date: Time.new(1999))
   end
 
   context 'Create a music_album' do
@@ -21,7 +21,6 @@ describe MusicAlbum do
   end
 
   context 'Test can_be_archived? method' do
-
     it "return true if both parent's method and on_spotify is return true" do
       expect(@music_album1.can_be_archived?).to eql(true)
     end
