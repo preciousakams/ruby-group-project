@@ -2,7 +2,7 @@
 > A command-line-based Catalog of my things, application built with object-oriented programming (OOP). functionalities include adding and dsplaying books, music albums, games etc.
 
  ***
-> [App Demo]
+> [App Demo](https://drive.google.com/file/d/1jEc1Fhx5qG0CGfsM5AGAJcoYys7MPBlG/view?usp=sharing)
 ## Built With
 > Ruby
 ***
