@@ -14,7 +14,7 @@
 * Click on the numbers representing your options and follow the command prompt
 ***
 ##  unit testing
-* Run tests by clicking rspec spec
+* Run tests using rspec spec 
 ***
 ### Prerequisites
 > Ruby
