@@ -11,13 +11,15 @@ class App
       display_list
       option = gets.chomp.to_i
       if option <= 4
-        first_correction(option)
+        first_collection(option)
 
       elsif option > 4 && option <= 8
-        second_correction(option)
+
+        second_collection(option)
 
       elsif option > 8 && option <= 12
-        third_correction(option)
+        third_collection(option)
+
       else
         break
       end
@@ -25,7 +27,7 @@ class App
     display_list
   end
 
-  def first_correction(option)
+  def first_collection(option)
     case option
     when 1
       @list.list_all_books
@@ -38,7 +40,7 @@ class App
     end
   end
 
-  def second_correction(option)
+  def second_collection(option)
     case option
     when 5
       @list.list_all_genres
@@ -51,7 +53,7 @@ class App
     end
   end
 
-  def third_correction(option)
+  def third_collection(option)
     case option
     when 9
       @create.create_book

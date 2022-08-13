@@ -10,5 +10,6 @@ class Label
 
   def add_item(item)
     @items.push(item)
+    item.labels = self
   end
 end
