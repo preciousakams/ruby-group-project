@@ -1,44 +1,33 @@
+require_relative('../modules/retrieve_data')
 class List
-  def initialize
-    @books = []
-    @music_albums = []
-    @movies = []
-    @games = []
-    @genres = []
-    @labels = []
-    @authors = []
-    @sources = []
-  end
+  include RetrieveData
 
-  def list_all_books
-    puts 'There is no book!'
-  end
 
   def list_all_music_albums
-    puts 'There is no music_album!'
+    if retrieve_music_albums.empty?
+      puts 'There is no music_album!'
+    else
+      retrieve_music_albums.each_with_index do |music, index|
+        label = retrieve_labels.find { |item| item['id'] == music['label'] }
+        puts "#{index + 1}."
+        puts " Album Title: #{label['title']}"
+        puts " Is on Spotify?: #{music['on_spotify']}"
+        puts " Year of publication: #{Time.new(music['publish_date']).year}"
+      end
+    end
   end
 
-  def list_all_movies
-    puts 'There is no movies!'
-  end
-
-  def list_all_games
-    puts 'There is no games!'
-  end
 
   def list_all_genres
-    puts 'There is no genres!'
-  end
-
-  def list_all_labels
-    puts 'There is no labels!'
-  end
-
-  def list_all_authors
-    puts 'There is no authors!'
-  end
-
-  def list_all_sources
-    puts 'There is no sources!'
+    if retrieve_genres.empty?
+      puts 'There is no genres!'
+    else
+      retrieve_genres.each_with_index do |genre, index|
+        puts "#{index + 1}."
+        puts " Name: #{genre['name']}"
+      end
+    end
   end
 end
+
+
